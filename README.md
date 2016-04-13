@@ -1,4 +1,4 @@
-# guestbook_v1
+# guestbook
 
 FIXME
 

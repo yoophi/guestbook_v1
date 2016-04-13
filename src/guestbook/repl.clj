@@ -1,5 +1,5 @@
-(ns guestbook_v1.repl
-  (:use guestbook_v1.handler
+(ns guestbook.repl
+  (:use guestbook.handler
         ring.server.standalone
         [ring.middleware file-info file]))
 

@@ -1,4 +1,4 @@
-(defproject guestbook_v1 "0.1.0-SNAPSHOT"
+(defproject guestbook "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.6.0"]
@@ -6,9 +6,9 @@
                  [hiccup "1.0.5"]
                  [ring-server "0.3.1"]]
   :plugins [[lein-ring "0.8.12"]]
-  :ring {:handler guestbook_v1.handler/app
-         :init guestbook_v1.handler/init
-         :destroy guestbook_v1.handler/destroy}
+  :ring {:handler guestbook.handler/app
+         :init guestbook.handler/init
+         :destroy guestbook.handler/destroy}
   :profiles
   {:uberjar {:aot :all}
    :production
