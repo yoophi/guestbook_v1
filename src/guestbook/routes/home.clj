@@ -25,11 +25,8 @@
    (show-guests)
    [:hr]
    (form-to [:post "/"]
-            [:p "Name:"]
-            (text-field "name" name)
-            [:p "Message:"]
-            (text-area {:rows 10 :cols 40} "message" message)
-            [:br]
+            [:p "Name:"    (text-field "name" name)]
+            [:p "Message:" (text-area {:rows 10 :cols 40} "message" message)]
             (submit-button "comment"))))
 
 (defn save-message [name message]
@@ -44,5 +41,5 @@
      (home))))
 
 (defroutes home-routes
-    (GET "/" [] (home))
+    (GET "/" [name message error] (home name message error))
     (POST "/" [name message] (save-message name message)))
